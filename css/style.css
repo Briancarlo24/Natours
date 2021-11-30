@@ -10,6 +10,10 @@ Dark green: #28b485
 :root {
   --light-green: rgba(126, 213, 111, 0.8);
   --dark-green: rgba(40, 180, 131, 0.8);
+  --main-text: #fff;
+
+  --font-header-1: 3.875rem;
+  --font-header-2: 1.58rem;
 }
 
 html {
@@ -43,6 +47,46 @@ body {
     url("../img/hero.jpg");
   background-repeat: cover;
   background-position: top;
+  position: relative;
 
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+
+  border: 1px solid white;
+}
+
+.logo {
+  height: 35px;
+}
+
+.heading-container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+  border: 1px solid white;
+  color: var(--main-text);
+  text-transform: uppercase;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: var(--font-header-1);
+  font-weight: 400;
+  letter-spacing: 35px;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: var(--font-header-2);
+  font-weight: 700;
+  letter-spacing: 15px;
 }
