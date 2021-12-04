@@ -1,2 +1,2 @@
 # Natours
-Using HTML, CSS - Jonas S.
+Using HTML, SCSS 
