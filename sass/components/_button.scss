@@ -10,6 +10,9 @@
   transition: all 0.2s ease-out;
   position: relative;
   font-size: $default-font-size;
+
+  //Change for the button element
+  border: none;
 }
 
 .btn {
@@ -23,7 +26,9 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem $shadow-active;
   }
