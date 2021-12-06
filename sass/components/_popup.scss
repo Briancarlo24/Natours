@@ -19,34 +19,36 @@
   }
 
   &__content {
-    width: 68%;
-    height: 60%;
+    width: 110rem;
+    height: auto;
     background-color: $color-white;
     box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
     border-radius: 3px;
     display: grid;
-    grid-template-columns: 33.33333% 66.66667%;
+    grid-template-columns: auto auto;
     overflow: hidden;
     position: relative;
     opacity: 0;
     transform: scale(0);
     transition: transform 0.4s 0.2s;
-
-    @include respond(tab-port) {
-      grid-template-columns: 100%;
-    }
-
-    @include respond(phone) {
-      grid-template-columns: 100%;
-    }
   }
 
   &__left {
-    display: flex;
-    flex-direction: column;
+    &-img {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      background-color: chartreuse;
 
-    @include respond(phone) {
-      grid-template-columns: 100%;
+      &--1 {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+      &--2 {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
     }
   }
 
@@ -59,11 +61,6 @@
     padding: 3rem 5rem;
   }
 
-  &__img {
-    display: block;
-    width: 100%;
-    background-size: cover;
-  }
   &__text {
     font-weight: 1.4rem;
     margin-bottom: 4rem;
