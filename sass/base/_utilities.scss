@@ -25,18 +25,6 @@
     margin-bottom: 1rem !important;
   }
 }
-// .u-padding-inline-medium {
-//   padding-inline: 6rem;
-
-//   @include respond(tab-port) {
-//     padding-inline: 3rem;
-//   }
-
-//   @include respond(phone) {
-//     padding-inline: 2rem;
-//   }
-// }
-
 .u-center-container {
   margin-left: auto;
   margin-right: auto;
@@ -59,11 +47,11 @@
   gap: 4rem;
 
   @include respond(tab-port) {
-    gap: 3rem;
+    gap: 4rem;
   }
 
   @include respond(phone) {
-    gap: 2.5rem;
+    gap: 2rem;
   }
 }
 .u-gap-sm {
