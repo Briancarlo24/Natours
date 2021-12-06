@@ -4,11 +4,11 @@
   margin-top: -20vh;
 
   @include respond(tab-port) {
-    padding: 25rem 0 15rem;
+    padding: 25rem 0 50rem;
   }
 
   @include respond(phone) {
-    padding: 20rem 0 20rem;
+    padding: 20rem 0 40rem;
   }
 }
 
@@ -35,7 +35,7 @@
   }
 
   @include respond(phone) {
-    padding: 30rem 0 15rem;
+    padding: 15rem 0 15rem;
   }
 }
 
@@ -49,11 +49,11 @@
   }
 
   @include respond(tab-port) {
-    padding: 20rem 0 5rem;
+    padding: 25rem 0 10rem;
   }
 
   @include respond(phone) {
-    padding: 20rem 0 5rem;
+    padding: 20rem 0 10rem;
   }
 }
 
@@ -62,11 +62,11 @@
   position: relative;
 
   @include respond(tab-port) {
-    padding: 15rem 0;
+    padding: 15rem 0 10rem;
   }
 
   @include respond(phone) {
-    padding: 15rem 0 2rem;
+    padding: 10rem 0 5rem;
   }
 }
 
@@ -79,11 +79,7 @@
   );
 
   @include respond(tab-port) {
-    padding: 20rem 0;
-  }
-
-  @include respond(phone) {
-    padding: 15rem 0;
+    padding: 10rem 0 10rem;
   }
 }
 
