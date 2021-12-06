@@ -1,20 +1,65 @@
+.row {
+  max-width: 120rem;
+  padding-inline: 4rem;
+
+  @include respond(tab-land) {
+    padding-inline: 6rem;
+  }
+  @include respond(tab-port) {
+    padding-inline: 4rem;
+  }
+  @include respond(phone) {
+    padding-inline: 2rem;
+  }
+}
+
 .grid-1 {
   display: grid;
 }
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
+  @include respond(phone) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+
+  @include respond(tab-land) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond(phone) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .grid-4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+
+  @include respond(tab-land) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include respond(phone) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include respond(phone-small) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .grid-center {
   justify-content: center !important;
-  place-content: center !important;
 }

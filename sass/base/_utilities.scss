@@ -13,9 +13,18 @@
 .u-margin-bottom-small {
   margin-bottom: 1.5rem !important;
 }
-.u-max-width--lg {
-  max-width: 1199px !important;
-}
+// .u-padding-inline-medium {
+//   padding-inline: 6rem;
+
+//   @include respond(tab-port) {
+//     padding-inline: 3rem;
+//   }
+
+//   @include respond(phone) {
+//     padding-inline: 2rem;
+//   }
+// }
+
 .u-center-container {
   margin-left: auto;
   margin-right: auto;
@@ -24,13 +33,29 @@
   text-align: center;
 }
 .u-gap-lg {
-  gap: 6rem !important;
+  gap: 6rem;
+
+  @include respond(tab-port) {
+    gap: 3rem;
+  }
+
+  @include respond(phone) {
+    gap: 1.5rem;
+  }
 }
 .u-gap-md {
-  gap: 4rem !important;
+  gap: 4rem;
+
+  @include respond(tab-port) {
+    gap: 3rem;
+  }
+
+  @include respond(phone) {
+    gap: 2.5rem;
+  }
 }
 .u-gap-sm {
-  gap: 2rem !important;
+  gap: 2rem;
 }
 .col {
   border: 1px solid lightcyan;

@@ -1,0 +1,101 @@
+.popup {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99999;
+  background-color: rgba($color-black, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__content {
+    width: 68%;
+    height: 60%;
+    background-color: $color-white;
+    box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
+    border-radius: 3px;
+    display: grid;
+    grid-template-columns: 33.33333% 66.66667%;
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+    transform: scale(0);
+    transition: transform 0.4s 0.2s;
+
+    @include respond(tab-port) {
+      grid-template-columns: 100%;
+    }
+
+    @include respond(phone) {
+      grid-template-columns: 100%;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+
+    @include respond(phone) {
+      grid-template-columns: 100%;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 3rem 5rem;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    background-size: cover;
+  }
+  &__text {
+    font-weight: 1.4rem;
+    margin-bottom: 4rem;
+
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid $color-grey-light-2;
+
+    hyphens: auto;
+  }
+
+  &:target &__content {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      color: $color-grey-dark;
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      font-size: 3rem;
+      text-decoration: none;
+      descent-override: inline-block;
+      transition: all 0.2s;
+      line-height: 1;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}

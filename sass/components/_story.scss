@@ -9,12 +9,28 @@
   grid-template-columns: 15rem 1fr;
   transform: skewX(-12deg);
   text-align: left;
+  padding: 6rem;
 
   & > * {
     transform: skewX(12deg);
   }
 
-  padding: 6rem;
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+    transform: skewX(-6deg);
+    padding: 3rem;
+    & > * {
+      transform: skewX(6deg);
+    }
+  }
+
+  @include respond(phone) {
+    transform: skewX(-3deg);
+    padding: 2.5em;
+    & > * {
+      transform: skewX(3deg);
+    }
+  }
 
   &__shape {
     width: 15rem;
@@ -23,6 +39,10 @@
     clip-path: circle(50% at 50% 50%);
     cursor: pointer;
     position: relative;
+
+    @include respond(tab-port) {
+      margin-inline: auto;
+    }
   }
 
   &__img {
@@ -32,6 +52,9 @@
   }
 
   &__text {
+    @include respond(tab-port) {
+      transform: skewX(0deg);
+    }
   }
 
   &__caption {
