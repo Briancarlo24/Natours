@@ -1442,20 +1442,13 @@ body {
 
 .header {
   height: 95vh;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url("../img/hero-small.jpg");
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero-small.jpg");
-  background-repeat: cover;
-  background-position: top;
-  position: relative;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url("../img/hero.jpg");
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
-  .header {
-    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url("../img/hero.jpg");
-    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
-  }
+  background-size: cover;
+  background-position: top;
+  position: relative;
 }
 
 @media only screen and (max-width: 75em) {
@@ -1820,18 +1813,6 @@ body {
           transform: translateX(0);
 }
 
-.navigation__checkbox:checked ~ .navigation__background {
-  -webkit-transform: scale(80);
-          transform: scale(80);
-}
-
-.navigation__checkbox:checked ~ .navigation__nav {
-  opacity: 1;
-  width: 100%;
-  -webkit-transform: scale(1) translateY(0);
-          transform: scale(1) translateY(0);
-}
-
 .navigation__icon {
   position: relative;
   margin-top: 50%;
@@ -1884,6 +1865,18 @@ body {
   -webkit-transform: rotate(-135deg);
           transform: rotate(-135deg);
   top: 0rem;
+}
+
+.nav__bg-display {
+  -webkit-transform: scale(80);
+          transform: scale(80);
+}
+
+.nav__display {
+  opacity: 1;
+  width: 100%;
+  -webkit-transform: scale(1) translateY(0);
+          transform: scale(1) translateY(0);
 }
 
 .section-about {

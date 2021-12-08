@@ -28,7 +28,7 @@
             <a href="#section-about" class="navigation__link">About Natours</a>
           </li>
           <li class="navigation__item">
-            <a href="#section-feature" class="navigation__link"
+            <a href="#section-features" class="navigation__link"
               >Your benifits</a
             >
           </li>
@@ -53,7 +53,10 @@
           <span class="heading-primary--main">Outdoors</span>
           <span class="heading-primary--sub">is where life happens</span>
         </h1>
-        <a href="#heading-tours" class="btn btn--white btn--animated"
+        <a
+          href="#section-tours"
+          id="btn--header"
+          class="btn btn--white btn--animated"
           >Discover our tours</a
         >
       </div>
@@ -91,7 +94,7 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
             <div class="composition__button-container">
-              <a href="#" class="btn-text composition__button"
+              <a href="#section-features"" class="btn-text composition__button"
                 >Learn more &rarr;</a
               >
             </div>
@@ -466,20 +469,25 @@
 
     <footer class="footer">
       <div class="footer__logo-box u-margin-bottom-big">
-        <picture class="footer__logo">
+        <!-- <picture class="footer__logo">
           <source
             srcset="
               img/logo-green-small-1x.png 1x,
               img/logo-green-small-2x.png 2x
             "
-            media="(max-width: 37.5rem)"
+            media="(max-width: 37.5em)"
           />
           <img
             srcset="img/logo-green-1x/png 1x, img/logo-green-2x.png 2x"
             alt="Full logo"
             src="img/logo-green-2x.png"
           />
-        </picture>
+        </picture> -->
+        <img
+        class="footer__logo"
+        alt="Full logo"
+        src="img/logo-green-1x.png"
+      />
       </div>
       <div class="grid-2 row footer__container">
         <!-- <div class="col-1-2 footer__container--left grid-1"> -->
@@ -566,5 +574,6 @@
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

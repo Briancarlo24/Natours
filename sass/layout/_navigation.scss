@@ -144,15 +144,15 @@
     }
   }
 
-  &__checkbox:checked ~ &__background {
-    transform: scale(80);
-  }
+  // &__checkbox:checked ~ &__background {
+  //   transform: scale(80);
+  // }
 
-  &__checkbox:checked ~ &__nav {
-    opacity: 1;
-    width: 100%;
-    transform: scale(1) translateY(0);
-  }
+  // &__checkbox:checked ~ &__nav {
+  //   opacity: 1;
+  //   width: 100%;
+  //   transform: scale(1) translateY(0);
+  // }
 
   //   ICON
   &__icon {
@@ -205,4 +205,14 @@
     transform: rotate(-135deg);
     top: 0rem;
   }
+}
+
+// JAVASCRIPT CLASSES
+.nav__bg-display {
+  transform: scale(80);
+}
+.nav__display {
+  opacity: 1;
+  width: 100%;
+  transform: scale(1) translateY(0);
 }
