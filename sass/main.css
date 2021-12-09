@@ -1818,65 +1818,62 @@ body {
   margin-top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-}
-
-.navigation__icon, .navigation__icon::before, .navigation__icon::after {
   width: 3rem;
   height: 2px;
   background-color: #333;
   display: inline-block;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
-.navigation__icon::before, .navigation__icon::after {
-  content: "";
+.navigation__icon--1 {
   position: absolute;
-  left: 0;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.navigation__icon::before {
+  content: "";
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   top: -1rem;
 }
 
-.navigation__icon::after {
+.navigation__icon--2 {
+  visibility: visible;
+}
+
+.navigation__icon--3 {
+  position: absolute;
+  content: "";
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   top: 1rem;
+  left: 50%;
 }
 
-.navigation__button:hover .navigation__icon::before {
-  top: -1.2rem;
-}
-
-.navigation__button:hover .navigation__icon::after {
-  top: 1.2rem;
-}
-
-.navigation__checkbox:checked + .navigation__button .navigation__icon {
-  background-color: transparent;
-}
-
-.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
-  top: 0rem;
-}
-
-.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
-  -webkit-transform: rotate(-135deg);
-          transform: rotate(-135deg);
-  top: 0rem;
-}
-
-.nav__bg-display {
+.navigation .nav__bg-display {
   -webkit-transform: scale(80);
           transform: scale(80);
 }
 
-.nav__display {
+.navigation .nav__display {
   opacity: 1;
   width: 100%;
   -webkit-transform: scale(1) translateY(0);
           transform: scale(1) translateY(0);
+}
+
+.navigation .icon-1 {
+  top: 0;
+  -webkit-transform: translateX(-50%) rotate(135deg);
+          transform: translateX(-50%) rotate(135deg);
+}
+
+.navigation .icon-2 {
+  background-color: transparent;
+}
+
+.navigation .icon-3 {
+  top: 0;
+  -webkit-transform: translateX(-50%) rotate(-135deg);
+          transform: translateX(-50%) rotate(-135deg);
 }
 
 .section-about {
@@ -2031,11 +2028,11 @@ body {
 @media only screen and (max-width: 37.5em) {
   .book__form {
     width: 90%;
-    padding: 4rem 1rem;
+    padding: 4rem 4rem;
   }
 }
 
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 23.4375em) {
   .book__form {
     width: 90%;
     padding: 4rem 2rem;

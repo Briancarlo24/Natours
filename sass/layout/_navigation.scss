@@ -159,60 +159,98 @@
     position: relative;
     margin-top: 50%;
     transform: translateY(-50%);
+    width: 3rem;
+    height: 2px;
+    background-color: $color-grey-dark-3;
+    display: inline-block;
+    transition: all 0.2s ease-out;
 
-    &,
-    &::before,
-    &::after {
-      width: 3rem;
-      height: 2px;
-      background-color: $color-grey-dark-3;
-      display: inline-block;
-    }
-
-    &::before,
-    &::after {
-      content: "";
+    &--1 {
       position: absolute;
-      left: 0;
-      transition: all 0.2s;
-    }
-
-    &::before {
+      content: "";
+      left: 50%;
+      transform: translateX(-50%);
       top: -1rem;
     }
-
-    &::after {
+    &--2 {
+      // rotate
+      visibility: visible;
+    }
+    &--3 {
+      position: absolute;
+      content: "";
+      transform: translateX(-50%);
       top: 1rem;
+      left: 50%;
     }
   }
-  &__button:hover &__icon::before {
-    top: -1.2rem;
-  }
-  &__button:hover &__icon::after {
-    top: 1.2rem;
-  }
 
-  &__checkbox:checked + &__button &__icon {
+  //   &,
+  //   &::before,
+  //   &::after {
+  //     width: 3rem;
+  //     height: 2px;
+  //     background-color: $color-grey-dark-3;
+  //     display: inline-block;
+  //   }
+
+  //   &::before,
+  //   &::after {
+  //     content: "";
+  //     position: absolute;
+  //     left: 0;
+  //     transition: all 0.2s;
+  //   }
+
+  //   &::before {
+  //     top: -1rem;
+  //   }
+
+  //   &::after {
+  //     top: 1rem;
+  //   }
+  // }
+  // &__button:hover &__icon::before {
+  //   top: -1.2rem;
+  // }
+  // &__button:hover &__icon::after {
+  //   top: 1.2rem;
+  // }
+
+  // &__checkbox:checked + &__button &__icon {
+  //   background-color: transparent;
+  // }
+
+  // &__checkbox:checked + &__button &__icon::before {
+  //   transform: rotate(135deg);
+  //   top: 0rem;
+  // }
+
+  // &__checkbox:checked + &__button &__icon::after {
+  //   transform: rotate(-135deg);
+  //   top: 0rem;
+  // }
+
+  // JAVASCRIPT CLASSES
+  .nav__bg-display {
+    transform: scale(80);
+  }
+  .nav__display {
+    opacity: 1;
+    width: 100%;
+    transform: scale(1) translateY(0);
+  }
+  .icon-1 {
+    // rotate
+    top: 0;
+    transform: translateX(-50%) rotate(135deg);
+  }
+  .icon-2 {
     background-color: transparent;
   }
-
-  &__checkbox:checked + &__button &__icon::before {
-    transform: rotate(135deg);
-    top: 0rem;
+  .icon-3 {
+    // rotate
+    top: 0;
+    transform: translateX(-50%) rotate(-135deg);
   }
-
-  &__checkbox:checked + &__button &__icon::after {
-    transform: rotate(-135deg);
-    top: 0rem;
-  }
-}
-
-// JAVASCRIPT CLASSES
-.nav__bg-display {
-  transform: scale(80);
-}
-.nav__display {
-  opacity: 1;
-  width: 100%;
-  transform: scale(1) translateY(0);
 }
